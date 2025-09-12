@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 dataList.add(useraddedcity);
                 cityAdapter.notifyDataSetChanged();
                 inputtext.setText("");
-                Toast.makeText(MainActivity.this, "City Added!", Toast.LENGTH_SHORT).show();
                 }
                 else {Toast.makeText(MainActivity.this, "City not added!", Toast.LENGTH_SHORT).show();}
             }
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
 
         cityList.setOnItemClickListener((android.widget.AdapterView<?> parent, View view, int position, long id) -> {
             selectedcity = position;
-            Toast.makeText(MainActivity.this, "Selected: " + dataList.get(position), Toast.LENGTH_SHORT).show();
         });
 
 
@@ -66,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 if (!dataList.isEmpty()) {
                     dataList.remove(selectedcity);
                     cityAdapter.notifyDataSetChanged();
-                    Toast.makeText(MainActivity.this, "City Deleted!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
